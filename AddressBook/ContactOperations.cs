@@ -8,9 +8,12 @@ namespace AddressBook
 {
     internal class ContactOperations
     {
-        public void AddNewContact()
+        List <CreateContacts> AddressBook = new List<CreateContacts>();
+
+        public CreateContacts InputNewContactDetails()
         {
             CreateContacts contacts = new CreateContacts();
+            Console.WriteLine("\n**************************");
             Console.WriteLine("Enter your first name: ");
             contacts.firstName = Console.ReadLine();
             Console.WriteLine("Enter your last name: ");
@@ -27,7 +30,20 @@ namespace AddressBook
             contacts.phoneNumber = Console.ReadLine();
             Console.WriteLine("Enter your email: ");
             contacts.email = Console.ReadLine();
-
+            Console.WriteLine("**************************\n");
+            return contacts;
         }
+        public void AddNewContact()
+        {
+            CreateContacts contacts = new CreateContacts();
+            Console.WriteLine("Enter the number of contacts you want add: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < num; i++)
+            {
+                contacts = InputNewContactDetails();
+                AddressBook.Add(contacts);
+            }
+        }
+
     }
 }
