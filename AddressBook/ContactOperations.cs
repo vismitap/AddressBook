@@ -33,7 +33,7 @@ namespace AddressBook
             Console.WriteLine("**************************\n");
             return contacts;
         }
-        public CreateContacts AddNewContact()
+        public CreateContacts AddNewContact(CreateContacts contacts)
         {
             Console.WriteLine("Enter the number of contacts you want add: ");
             int num = Convert.ToInt32(Console.ReadLine());
@@ -123,6 +123,24 @@ namespace AddressBook
             }
 
             Console.WriteLine(contacts.firstName + " " + contacts.lastName);
+            return contacts;
+        }
+
+        public CreateContacts DeletePersonDetails(CreateContacts contacts)
+        {
+            Console.WriteLine("Enter the firstName: ");
+            string fName = Console.ReadLine();
+
+            if(contacts.firstName == fName)
+            {
+                AddressBook.Remove(contacts);
+                Console.WriteLine("Contact deleted successfully!");
+            }
+            else
+            {
+                Console.WriteLine(fName + " not present!");
+            }
+
             return contacts;
         }
     }

@@ -20,7 +20,8 @@ namespace AddressBook
                 Console.WriteLine("\nEnter\n" +
                     "0 to Exit\n" +
                     "1 to Add new Contact\n" +
-                    "2 to Update Existing Contact\n");
+                    "2 to Update Existing Contact\n" +
+                    "3 to Delete Existing Contact\n");
 
                 int option = Convert.ToInt32(Console.ReadLine());
 
@@ -31,11 +32,15 @@ namespace AddressBook
                         break; 
 
                     case 1:
-                        operations.AddNewContact();
+                        operations.AddNewContact(contacts);
                         break;
 
                     case 2:
                         operations.EditContact(contacts);
+                        break;
+
+                    case 3:
+                        operations.DeletePersonDetails(contacts);
                         break;
 
                 }
