@@ -143,5 +143,19 @@ namespace AddressBook
 
             return contacts;
         }
+
+        public CreateContacts Display(CreateContacts contacts)
+        {
+            Console.WriteLine("First Name :" + contacts.firstName);
+            Console.WriteLine("Last Name  :" + contacts.lastName);
+            Console.WriteLine("Address    :" + contacts.address);
+            Console.WriteLine("City       :" + contacts.city);
+            Console.WriteLine("State      :" + contacts.state);
+            Console.WriteLine("Zip        :" + contacts.zip);
+            Console.WriteLine("Phonenumber :" + contacts.phoneNumber);
+            Console.WriteLine("Email :" + contacts.email);
+
+            return contacts;
+        }
     }
 }
