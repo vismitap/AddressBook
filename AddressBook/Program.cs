@@ -11,8 +11,8 @@ namespace AddressBook
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the AddressBook problem");
-            CreateContacts contacts = new CreateContacts();
-            contacts.CreateNewContacts();
+            ContactOperations operations = new ContactOperations();
+            operations.AddNewContact();
         }
     }
 }
