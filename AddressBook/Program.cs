@@ -12,7 +12,36 @@ namespace AddressBook
         {
             Console.WriteLine("Welcome to the AddressBook problem");
             ContactOperations operations = new ContactOperations();
-            operations.AddNewContact();
+            CreateContacts contacts = new CreateContacts();
+            bool flag = true;
+
+            while (flag)
+            {
+                Console.WriteLine("\nEnter\n" +
+                    "0 to Exit\n" +
+                    "1 to Add new Contact\n" +
+                    "2 to Update Existing Contact\n");
+
+                int option = Convert.ToInt32(Console.ReadLine());
+
+                switch (option)
+                {
+                    case 0:
+                        flag = false;
+                        break; 
+
+                    case 1:
+                        operations.AddNewContact();
+                        break;
+
+                    case 2:
+                        operations.EditContact(contacts);
+                        break;
+
+                }
+            }
+           
+
         }
     }
 }
