@@ -157,10 +157,8 @@ namespace AddressBook
 
         public void ViewAll()
         {
-            foreach(CreateContacts contacts in AddressBook)
-            {
-                Display(contacts);
-            }
+            AddressBook.ForEach(Display);
         }
+
     }
 }
