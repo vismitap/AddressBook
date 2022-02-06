@@ -45,7 +45,7 @@ namespace AddressBook
                         break;
 
                     case 4:
-                        operations.Display(contacts);
+                        operations.ViewAll();
                         break;
 
                 }
