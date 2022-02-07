@@ -12,7 +12,6 @@ namespace AddressBook
         {
             Console.WriteLine("Welcome to the AddressBook problem");
             ContactOperations operations = new ContactOperations();
-            CreateContacts contacts = new CreateContacts();
             bool flag = true;
 
             while (flag)
@@ -33,19 +32,19 @@ namespace AddressBook
                         break; 
 
                     case 1:
-                        operations.AddNewContact(contacts);
+                        operations.AddNewContact();
                         break;
 
                     case 2:
-                        operations.EditContact(contacts);
+                        operations.EditContact();
                         break;
 
                     case 3:
-                        operations.DeletePersonDetails(contacts);
+                        operations.DeletePersonDetails();
                         break;
 
                     case 4:
-                        operations.ViewAll();
+                        operations.Display();
                         break;
 
                 }
